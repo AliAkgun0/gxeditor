@@ -11,12 +11,16 @@
     <UseWPF>true</UseWPF>
     <AssemblyName>GalaXako.Editor.App</AssemblyName>
     <RootNamespace>GalaXako.Editor.App</RootNamespace>
-    <ApplicationIcon />
+    <ApplicationIcon>Assets\GalaXakoEditor.ico</ApplicationIcon>
     <Version>1.0.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AvalonEdit" Version="6.3.1.120" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\GalaXakoEditor.ico" />
   </ItemGroup>
 
   <ItemGroup>
