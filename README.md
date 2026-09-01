@@ -1,83 +1,171 @@
 # GalaXako Editor
 
-**GX Editor 1.0.0** — Large Files. Clean Lists. Fast.
+> **Büyük Dosyalar. Temiz Listeler. Hızlı İşlem.**
 
-GalaXako Editor, Windows üzerinde TXT, LOG, CSV, TSV, JSONL ve diğer satır tabanlı dosyaları yerel olarak incelemek, düzenlemek ve dönüştürmek için geliştirilmiş .NET 10 WPF uygulamasıdır. Uygulama dosya içeriğini herhangi bir uzak servise göndermez.
+Büyük metin tabanlı dosyaları görüntülemek, temizlemek, filtrelemek, ayıklamak ve dönüştürmek için geliştirilmiş modern bir Windows masaüstü uygulaması.
+
+**C# · .NET 10 · WPF · MVVM** ile geliştirilmiştir.
+
+![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
+![Platform](https://img.shields.io/badge/Platform-Windows-0078D4)
+![Dil](https://img.shields.io/badge/Dil-C%23-239120)
+![Arayüz](https://img.shields.io/badge/UI-WPF-68217A)
+![Durum](https://img.shields.io/badge/Durum-Geliştiriliyor-orange)
+
+---
+
+## Hakkında
+
+**GalaXako Editor**, TXT, LOG, CSV, TSV, JSONL ve diğer satır tabanlı dosyalar üzerinde hızlı ve yerel işlem yapmak için geliştirilmiştir.
+
+Amaç klasik bir Not Defteri alternatifi olmak değil; özellikle büyük veri dosyalarında:
+
+- hızlı görüntüleme,
+- filtreleme,
+- temizleme,
+- tekrarları kaldırma,
+- veri ayıklama,
+- sıralama,
+- bölme,
+- birleştirme
+
+gibi işlemleri tek uygulamada sunmaktır.
+
+Tüm dosya işlemleri **yerel olarak bilgisayarınızda** gerçekleştirilir.
+
+Dosya içerikleri uzak sunuculara gönderilmez.
+
+---
 
 ## Özellikler
 
-- Yapılandırılabilir 16/32/64/128 MB eşiğe sahip Normal Düzenleme ve Büyük Dosya modları
-- AvalonEdit tabanlı normal editör: satır numarası, bul/değiştir, regex, sözcük eşleme, boşluk görünümü, kaydırma, geri al/yinele ve yakınlaştırma
-- Büyük dosyalarda belleği sınırlı önizleme, seyrek satır indeksi, satır/bayt/yüzde gezintisi ve akışlı arama
-- Clean, çoklu AND/OR Filter, Dedupe, Extract, Delimiter/Column, Sort, Split, Merge ve Compare motorları
-- Büyük veri için disk bölümlü dedupe ve geçici parça tabanlı harici birleştirmeli sıralama
-- Gerçek ilerleme, işlenen bayt/satır, hız, ETA ve iptal içeren İşler sayfası
-- JSON olarak kaydedilen yeniden sıralanabilir pipeline'lar ve sınırlı eşzamanlı batch çalıştırma
-- Güvenli çıktı: dönüşümler mevcut çıktının üzerine yazmaz; editör kaydı aynı klasörde geçici dosya ve güvenli değiştirme kullanır
-- Yerel JSON ayar/geçmiş/pipeline depolama ve içerik kaydetmeyen dönen günlükler
+### Büyük Dosya Modu
 
-## Ekran görüntüleri
+- Akış tabanlı dosya okuma
+- Seyrek satır indeksi
+- Sayfalı / sanallaştırılmış önizleme
+- Satır, bayt konumu veya yüzde üzerinden gezinme
+- Dosyanın tamamını RAM'e yüklemeden arama
+- Yapılandırılabilir normal / büyük dosya eşiği
 
-Dağıtım ekran görüntüleri sürüm paketine eklenecektir. Uygulama içinde koyu Fluent tabanlı GalaXako tasarım sistemi, özel başlık çubuğu ve özgün vektör GX işareti bulunur.
+### Editör
 
-## Mimari
+- AvalonEdit tabanlı metin editörü
+- Satır numaraları
+- Bul / Değiştir
+- Regex arama
+- Büyük-küçük harf duyarlılığı
+- Tam kelime eşleme
+- Satır kaydırma
+- Satıra git
+- Yakınlaştırma
+- Geri al / Yinele
+- Encoding ve satır sonu bilgileri
 
-- `GalaXakoEditor/`: WPF uygulaması, görünümler ve MVVM görünüm modelleri
-- `src/GalaXako.Editor.Core/`: akışlı G/Ç, büyük dosya indeksi, işlemler ve pipeline motoru
-- `src/GalaXako.Editor.Infrastructure/`: JSON kalıcılık ve yerel dönen günlükler
-- `tests/GalaXako.Editor.Tests/`: dış servise ihtiyaç duymayan gerçek geçici dosya testleri
-- `tools/GalaXako.Editor.DatasetGenerator/`: 100 MB, 1 GB veya özel boyutta benchmark verisi üreteci
+### Temizleme
 
-Pahalı dosya işlemleri UI iş parçacığı dışında async çalışır. Görünür ilerleme yaklaşık saniyede birkaç kez güncellenir. Büyük dosya önizlemesi tek bir dev satırı dahi bütünüyle bir `string` olarak ayırmaz; görünür satır örneğini sınırlı tamponla üretir.
+- Satır başı ve sonu boşluklarını temizleme
+- Boş satırları kaldırma
+- Tekrarlanan boşlukları normalleştirme
+- Satır sonlarını normalleştirme
+- Tekrarlanan satırları kaldırma
+- Minimum / maksimum satır uzunluğu filtresi
+- Büyük harf / küçük harf dönüşümü
 
-## Gereksinimler
+### Filtreleme
 
-- Geliştirme: Windows 10/11 x64 ve .NET 10 SDK `10.0.400` veya uyumlu daha yeni feature band
-- Çalıştırma: framework-dependent Debug için .NET 10 Desktop Runtime; self-contained publish için ek runtime gerekmez
-- Visual Studio ile açmak için `GalaXakoEditor.slnx`
+Birden fazla kural oluşturulabilir:
 
-## Derleme ve test
+- İçerir
+- İçermez
+- Bununla başlar
+- Bununla biter
+- Eşittir
+- Eşit değildir
+- Regex eşleşmesi
+- Uzunluk kuralları
+- AND / OR mantığı
 
-```powershell
-dotnet restore .\GalaXakoEditor.slnx
-dotnet build .\GalaXakoEditor.slnx -c Debug
-dotnet test .\GalaXakoEditor.slnx -c Release
-```
+### Ayıklama
 
-Depodaki `global.json`, .NET 10'un Microsoft Testing Platform çalıştırıcısını seçer.
+Metin içinden yapılandırılmış veriler çıkarılabilir:
 
-## Yayınlama
+- URL
+- Alan adı
+- E-posta biçimleri
+- IPv4
+- IPv6
+- MD5
+- SHA-1
+- SHA-256
+- Özel Regex
 
-Self-contained Windows x64 tek dosya yayını:
+### Sütun Araçları
 
-```powershell
-dotnet publish .\GalaXakoEditor\GalaXakoEditor.csproj -c Release -p:PublishProfile=win-x64
-```
+Ayraç tabanlı veriler için genel amaçlı işlem araçları:
 
-Çıktı `GalaXakoEditor\bin\Release\publish\win-x64-single\` altında oluşur.
+- CSV
+- TSV
+- `:`
+- `|`
+- özel ayraçlar
 
-## Benchmark veri üretimi
+Desteklenen işlemler:
 
-Üretilen büyük dosyalar kaynak denetimine dahil edilmez.
+- sütun çıkarma
+- sütun kaldırma
+- sütunları yeniden sıralama
+- sütun birleştirme
+- sütuna göre filtreleme
 
-```powershell
-dotnet run --project .\tools\GalaXako.Editor.DatasetGenerator -- --output .\benchmark-data\sample-100mb.txt --size 100MB
-dotnet run --project .\tools\GalaXako.Editor.DatasetGenerator -- --output .\benchmark-data\sample-1gb.txt --size 1GB
-```
+### Sıralama
 
-## Yerel uygulama verileri
+- A-Z
+- Z-A
+- Sayısal artan
+- Sayısal azalan
+- Kısadan uzuna
+- Uzundan kısaya
+- Doğal sıralama
 
-`%LocalAppData%\GalaXakoEditor\` altında:
+Büyük dosyalarda disk destekli harici sıralama yaklaşımı kullanılabilir.
 
-- `settings.json`
-- `pipelines.json`
-- `history.json`
-- `logs\gx-YYYYMMDD.log`
+### Böl & Birleştir
 
-Günlükler dosya içeriğini kaydetmez.
+Dosyalar şu şekilde bölünebilir:
 
-## Güvenlik ve kapsam
+- satır sayısına göre
+- yaklaşık dosya boyutuna göre
+- regex sınırlarına göre
 
-GX Editor genel amaçlı, yalnızca yerel metin/liste işleme aracıdır. Hesap veya kimlik bilgisi doğrulama, brute force, proxy kötüye kullanımı, yetkisiz scraping ya da üçüncü taraf servislerle veri doğrulama içermez.
+Birden fazla dosya akış tabanlı şekilde birleştirilebilir.
 
-Bilinen ve bilinçli olarak ertelenen etkileşimler [DeferredFeatures.md](DeferredFeatures.md) içinde açıkça listelenmiştir.
+### Karşılaştırma
+
+İki satır tabanlı dosya karşılaştırılabilir:
+
+- yalnızca A'da olanlar
+- yalnızca B'de olanlar
+- ortak satırlar
+- farklı satırlar
+
+### Pipeline
+
+Birden fazla işlem art arda çalıştırılabilir.
+
+Örnek:
+
+```text
+Girdi
+  ↓
+Boşlukları Temizle
+  ↓
+Boş Satırları Kaldır
+  ↓
+Filtrele
+  ↓
+Tekrarları Kaldır
+  ↓
+Sırala
+  ↓
+Dışa Aktar
