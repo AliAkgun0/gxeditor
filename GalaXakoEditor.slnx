@@ -1,0 +1,26 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="GalaXakoEditor/GalaXakoEditor.csproj">
+    <Platform Project="x64" />
+  </Project>
+  <Folder Name="/src/">
+    <Project Path="src/GalaXako.Editor.Core/GalaXako.Editor.Core.csproj">
+      <Platform Solution="*|x64" Project="Any CPU" />
+    </Project>
+    <Project Path="src/GalaXako.Editor.Infrastructure/GalaXako.Editor.Infrastructure.csproj">
+      <Platform Solution="*|x64" Project="Any CPU" />
+    </Project>
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/GalaXako.Editor.Tests/GalaXako.Editor.Tests.csproj">
+      <Platform Solution="*|x64" Project="Any CPU" />
+    </Project>
+  </Folder>
+  <Folder Name="/tools/">
+    <Project Path="tools/GalaXako.Editor.DatasetGenerator/GalaXako.Editor.DatasetGenerator.csproj">
+      <Platform Solution="*|x64" Project="Any CPU" />
+    </Project>
+  </Folder>
+</Solution>

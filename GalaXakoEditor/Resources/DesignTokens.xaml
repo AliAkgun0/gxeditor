@@ -1,0 +1,43 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Color x:Key="Color.Background">#0B0B0F</Color>
+    <Color x:Key="Color.Sidebar">#101014</Color>
+    <Color x:Key="Color.Surface">#16161C</Color>
+    <Color x:Key="Color.Surface.Secondary">#1C1C24</Color>
+    <Color x:Key="Color.Surface.Hover">#24232D</Color>
+    <Color x:Key="Color.Border">#2A2933</Color>
+    <Color x:Key="Color.Border.Strong">#454151</Color>
+    <Color x:Key="Color.Primary">#8067E8</Color>
+    <Color x:Key="Color.Primary.Hover">#927AF1</Color>
+    <Color x:Key="Color.Primary.Soft">#B8A8F4</Color>
+    <Color x:Key="Color.Text.Primary">#F5F4F8</Color>
+    <Color x:Key="Color.Text.Secondary">#9995A5</Color>
+    <Color x:Key="Color.Text.Muted">#65616D</Color>
+    <Color x:Key="Color.Success">#43D39E</Color>
+    <Color x:Key="Color.Warning">#F6C35B</Color>
+    <Color x:Key="Color.Danger">#FF5A72</Color>
+
+    <SolidColorBrush x:Key="Brush.Background" Color="{StaticResource Color.Background}" />
+    <SolidColorBrush x:Key="Brush.Sidebar" Color="{StaticResource Color.Sidebar}" />
+    <SolidColorBrush x:Key="Brush.Surface" Color="{StaticResource Color.Surface}" />
+    <SolidColorBrush x:Key="Brush.Surface.Secondary" Color="{StaticResource Color.Surface.Secondary}" />
+    <SolidColorBrush x:Key="Brush.Surface.Hover" Color="{StaticResource Color.Surface.Hover}" />
+    <SolidColorBrush x:Key="Brush.Border" Color="{StaticResource Color.Border}" />
+    <SolidColorBrush x:Key="Brush.Border.Strong" Color="{StaticResource Color.Border.Strong}" />
+    <SolidColorBrush x:Key="Brush.Primary" Color="{StaticResource Color.Primary}" />
+    <SolidColorBrush x:Key="Brush.Primary.Hover" Color="{StaticResource Color.Primary.Hover}" />
+    <SolidColorBrush x:Key="Brush.Primary.Soft" Color="{StaticResource Color.Primary.Soft}" />
+    <SolidColorBrush x:Key="Brush.Text.Primary" Color="{StaticResource Color.Text.Primary}" />
+    <SolidColorBrush x:Key="Brush.Text.Secondary" Color="{StaticResource Color.Text.Secondary}" />
+    <SolidColorBrush x:Key="Brush.Text.Muted" Color="{StaticResource Color.Text.Muted}" />
+    <SolidColorBrush x:Key="Brush.Success" Color="{StaticResource Color.Success}" />
+    <SolidColorBrush x:Key="Brush.Warning" Color="{StaticResource Color.Warning}" />
+    <SolidColorBrush x:Key="Brush.Danger" Color="{StaticResource Color.Danger}" />
+
+    <Thickness x:Key="Space.1">8</Thickness>
+    <Thickness x:Key="Space.2">16</Thickness>
+    <Thickness x:Key="Space.3">24</Thickness>
+    <Thickness x:Key="Space.4">32</Thickness>
+    <CornerRadius x:Key="Radius.Button">8</CornerRadius>
+    <CornerRadius x:Key="Radius.Card">12</CornerRadius>
+</ResourceDictionary>

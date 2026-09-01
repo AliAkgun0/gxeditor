@@ -1,0 +1,42 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+
+# Publish
+publish/
+
+# Test output
+TestResults/
+
+# Benchmark / generated datasets
+benchmark-data/
+*.benchmark.txt
+
+# Local application data
+settings.json
+history.json
+pipelines.json
+logs/
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# NuGet
+packages/
+*.nupkg

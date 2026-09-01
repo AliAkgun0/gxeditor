@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <AssemblyName>GalaXako.Editor.Infrastructure</AssemblyName>
+    <RootNamespace>GalaXako.Editor.Infrastructure</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GalaXako.Editor.Core\GalaXako.Editor.Core.csproj" />
+  </ItemGroup>
+</Project>
