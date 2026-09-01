@@ -2,79 +2,60 @@
 
 > **Büyük Dosyalar. Temiz Listeler. Hızlı İşlem.**
 
-Büyük metin tabanlı dosyaları görüntülemek, temizlemek, filtrelemek, ayıklamak ve dönüştürmek için geliştirilmiş modern bir Windows masaüstü uygulaması.
+Windows için geliştirilmiş modern ve yüksek performanslı metin/liste işleme uygulaması.
 
-**C# · .NET 10 · WPF · MVVM** ile geliştirilmiştir.
+**C# · .NET 10 · WPF · MVVM**
 
 ![.NET](https://img.shields.io/badge/.NET-10.0-512BD4)
 ![Platform](https://img.shields.io/badge/Platform-Windows-0078D4)
-![Dil](https://img.shields.io/badge/Dil-C%23-239120)
-![Arayüz](https://img.shields.io/badge/UI-WPF-68217A)
-![Durum](https://img.shields.io/badge/Durum-Geliştiriliyor-orange)
+![Language](https://img.shields.io/badge/Dil-C%23-239120)
+![Status](https://img.shields.io/badge/Durum-Geliştiriliyor-orange)
 
 ---
 
-## Hakkında
+## GalaXako Editor Nedir?
 
-**GalaXako Editor**, TXT, LOG, CSV, TSV, JSONL ve diğer satır tabanlı dosyalar üzerinde hızlı ve yerel işlem yapmak için geliştirilmiştir.
+GalaXako Editor; büyük **TXT, LOG, CSV, TSV ve JSONL** dosyalarını görüntülemek, temizlemek, filtrelemek ve dönüştürmek için geliştirilmiştir.
 
-Amaç klasik bir Not Defteri alternatifi olmak değil; özellikle büyük veri dosyalarında:
+Klasik bir Not Defteri alternatifi olmaktan çok, büyük satır tabanlı dosyalar üzerinde hızlı işlem yapmaya odaklanır.
 
-- hızlı görüntüleme,
-- filtreleme,
-- temizleme,
-- tekrarları kaldırma,
-- veri ayıklama,
-- sıralama,
-- bölme,
-- birleştirme
-
-gibi işlemleri tek uygulamada sunmaktır.
-
-Tüm dosya işlemleri **yerel olarak bilgisayarınızda** gerçekleştirilir.
-
-Dosya içerikleri uzak sunuculara gönderilmez.
+Tüm işlemler **yerel olarak bilgisayarınızda** gerçekleştirilir. Dosya içerikleri herhangi bir uzak sunucuya gönderilmez.
 
 ---
 
 ## Özellikler
 
-### Büyük Dosya Modu
+### Büyük Dosya Desteği
 
+- Dosyanın tamamını RAM'e yüklemeden görüntüleme
 - Akış tabanlı dosya okuma
 - Seyrek satır indeksi
-- Sayfalı / sanallaştırılmış önizleme
-- Satır, bayt konumu veya yüzde üzerinden gezinme
-- Dosyanın tamamını RAM'e yüklemeden arama
-- Yapılandırılabilir normal / büyük dosya eşiği
+- Büyük dosyalarda hızlı gezinme
+- Satır, bayt ve yüzde üzerinden konuma gitme
+- Akış tabanlı arama
 
-### Editör
+### Metin Editörü
 
-- AvalonEdit tabanlı metin editörü
 - Satır numaraları
 - Bul / Değiştir
-- Regex arama
-- Büyük-küçük harf duyarlılığı
-- Tam kelime eşleme
-- Satır kaydırma
+- Regex desteği
+- Büyük/küçük harf duyarlılığı
 - Satıra git
 - Yakınlaştırma
-- Geri al / Yinele
+- Geri al / yinele
 - Encoding ve satır sonu bilgileri
 
 ### Temizleme
 
-- Satır başı ve sonu boşluklarını temizleme
-- Boş satırları kaldırma
-- Tekrarlanan boşlukları normalleştirme
-- Satır sonlarını normalleştirme
+- Baş ve sondaki boşlukları kaldırma
+- Boş satırları silme
 - Tekrarlanan satırları kaldırma
-- Minimum / maksimum satır uzunluğu filtresi
-- Büyük harf / küçük harf dönüşümü
+- Boşlukları normalleştirme
+- Satır sonlarını normalleştirme
+- Minimum / maksimum satır uzunluğu
+- Büyük / küçük harf dönüşümü
 
 ### Filtreleme
-
-Birden fazla kural oluşturulabilir:
 
 - İçerir
 - İçermez
@@ -82,72 +63,67 @@ Birden fazla kural oluşturulabilir:
 - Bununla biter
 - Eşittir
 - Eşit değildir
-- Regex eşleşmesi
-- Uzunluk kuralları
-- AND / OR mantığı
+- Regex
+- Satır uzunluğu kuralları
+- AND / OR koşulları
 
-### Ayıklama
+### Veri Ayıklama
 
-Metin içinden yapılandırılmış veriler çıkarılabilir:
+Metin içerisinden:
 
 - URL
 - Alan adı
-- E-posta biçimleri
-- IPv4
-- IPv6
+- E-posta
+- IPv4 / IPv6
 - MD5
 - SHA-1
 - SHA-256
 - Özel Regex
 
+değerleri ayıklanabilir.
+
 ### Sütun Araçları
 
-Ayraç tabanlı veriler için genel amaçlı işlem araçları:
+CSV ve diğer ayraç tabanlı dosyalarda:
 
-- CSV
-- TSV
-- `:`
-- `|`
-- özel ayraçlar
+- Sütun çıkarma
+- Sütun kaldırma
+- Sütunları yeniden sıralama
+- Sütun birleştirme
+- Sütuna göre filtreleme
 
-Desteklenen işlemler:
-
-- sütun çıkarma
-- sütun kaldırma
-- sütunları yeniden sıralama
-- sütun birleştirme
-- sütuna göre filtreleme
+işlemleri yapılabilir.
 
 ### Sıralama
 
-- A-Z
-- Z-A
-- Sayısal artan
-- Sayısal azalan
+- A-Z / Z-A
+- Sayısal artan / azalan
 - Kısadan uzuna
 - Uzundan kısaya
 - Doğal sıralama
 
-Büyük dosyalarda disk destekli harici sıralama yaklaşımı kullanılabilir.
-
 ### Böl & Birleştir
 
-Dosyalar şu şekilde bölünebilir:
+Dosyalar:
 
-- satır sayısına göre
-- yaklaşık dosya boyutuna göre
-- regex sınırlarına göre
+- Satır sayısına göre
+- Yaklaşık dosya boyutuna göre
+- Regex sınırlarına göre
 
-Birden fazla dosya akış tabanlı şekilde birleştirilebilir.
+bölünebilir.
+
+Birden fazla dosya akış tabanlı olarak birleştirilebilir.
 
 ### Karşılaştırma
 
-İki satır tabanlı dosya karşılaştırılabilir:
+İki dosya arasında:
 
-- yalnızca A'da olanlar
-- yalnızca B'de olanlar
-- ortak satırlar
-- farklı satırlar
+- Yalnızca A'da bulunan satırlar
+- Yalnızca B'de bulunan satırlar
+- Ortak satırlar
+- Farklı satırlar
+
+tespit edilebilir.
 
 ### Pipeline
 
@@ -156,7 +132,7 @@ Birden fazla işlem art arda çalıştırılabilir.
 Örnek:
 
 ```text
-Girdi
+Dosya
   ↓
 Boşlukları Temizle
   ↓
@@ -168,127 +144,134 @@ Tekrarları Kaldır
   ↓
 Sırala
   ↓
-Dışa Aktar
+Çıktı
+```
 
-Pipeline'lar yerel olarak kaydedilebilir ve batch işlemlerde tekrar kullanılabilir.
+---
 
-Performans Yaklaşımı
+## Performans
 
-GalaXako Editor, çok büyük dosyaları tek bir string veya dizi içine yüklememek üzere tasarlanmıştır.
+GalaXako Editor büyük dosyalarda bellek kullanımını sınırlı tutacak şekilde tasarlanmıştır.
 
-Büyük dosya işlemlerinde kullanılan başlıca yaklaşımlar:
+Kullanılan başlıca yöntemler:
 
-FileStream
-akış tabanlı işleme
-sınırlı bellek kullanımı
-seyrek indeks
-disk destekli geçici işlemler
-harici birleştirmeli sıralama
-sınırlandırılmış eşzamanlılık
-async işlemler
-iptal desteği
-seyreltilmiş ilerleme güncellemeleri
+- Streaming I/O
+- `FileStream`
+- Async işlemler
+- CancellationToken
+- Seyrek indeksleme
+- Disk destekli geçici işlemler
+- Harici sıralama
+- Sınırlı eşzamanlılık
 
-Pahalı dosya işlemleri UI iş parçacığından ayrı çalıştırılır.
+Dosya işleme işlemleri arayüz iş parçacığından ayrı çalıştırılır.
 
-Gizlilik
+---
 
-GX Editor yerel çalışan bir masaüstü uygulamasıdır.
+## Gizlilik
 
-Varsayılan olarak telemetri yok
-Analitik yok
-Dosya yükleme yok
-Uzak sunucuya içerik gönderimi yok
+- Telemetri yok
+- Analitik yok
+- Dosya yükleme yok
+- Uzak sunucuya veri gönderimi yok
 
-Yerel uygulama verileri şu klasörde saklanır:
+Uygulama ayarları yerel olarak şu klasörde tutulur:
 
+```text
 %LocalAppData%\GalaXakoEditor\
-Proje Yapısı
+```
+
+---
+
+## Teknolojiler
+
+- **C#**
+- **.NET 10**
+- **WPF**
+- **MVVM**
+- **AvalonEdit**
+
+---
+
+## Proje Yapısı
+
+```text
 GalaXakoEditor/
-│
 ├── GalaXakoEditor/
-│   └── WPF uygulaması / Views / ViewModels
-│
 ├── src/
 │   ├── GalaXako.Editor.Core/
 │   └── GalaXako.Editor.Infrastructure/
-│
 ├── tests/
 │   └── GalaXako.Editor.Tests/
-│
 └── tools/
     └── GalaXako.Editor.DatasetGenerator/
-Gereksinimler
-Geliştirme
-Windows 10 / Windows 11 x64
-.NET 10 SDK
-Visual Studio 2026 veya uyumlu bir IDE
-Çalıştırma
+```
 
-Self-contained Windows x64 sürümünde son kullanıcının ayrıca .NET Runtime kurması gerekmez.
+---
 
-Derleme
+## Derleme
 
 Repoyu klonlayın:
 
+```powershell
 git clone https://github.com/AliAkgun0/gxeditor.git
 cd gxeditor
+```
 
 Bağımlılıkları yükleyin:
 
+```powershell
 dotnet restore .\GalaXakoEditor.slnx
+```
 
-Release derlemesi:
+Projeyi derleyin:
 
+```powershell
 dotnet build .\GalaXakoEditor.slnx -c Release
+```
 
 Testleri çalıştırın:
 
+```powershell
 dotnet test .\GalaXakoEditor.slnx -c Release
-Yayınlama
+```
 
-Windows x64 için self-contained sürüm:
+---
 
-dotnet publish .\GalaXakoEditor\GalaXakoEditor.csproj -c Release -p:PublishProfile=win-x64
+## Durum
 
-Çıktı klasörü:
+GalaXako Editor şu anda **aktif olarak geliştirilmektedir**.
 
-GalaXakoEditor\bin\Release\publish\win-x64-single\
-Geliştirme Durumu
+Özellikler otomatik ve manuel testlerden geçirilmektedir. İlk kararlı sürüm öncesinde bazı hata ve arayüz sorunları bulunabilir.
 
-GX Editor aktif olarak geliştirilmektedir.
+---
 
-Çekirdek dosya işleme özellikleri hem otomatik hem manuel testlerden geçirilmektedir.
+## Planlanan Geliştirmeler
 
-İlk kararlı sürüm öncesinde bazı UI ve edge-case problemleri bulunabilir.
+- UI/UX iyileştirmeleri
+- Önizleme sisteminin geliştirilmesi
+- Büyük dosya performans testleri
+- Batch işlemlerinin geliştirilmesi
+- Encoding seçeneklerinin genişletilmesi
+- Portable / Installer sürümü
 
-Yol Haritası
+---
 
-Planlanan geliştirmeler:
+## Hata Bildirimi
 
-UI/UX iyileştirmeleri
-tüm modüllerde daha kapsamlı önizleme desteği
-gelişmiş büyük dosya stres testleri
-batch işlem kontrollerinin iyileştirilmesi
-gelişmiş encoding seçenekleri
-daha kapsamlı benchmark sonuçları
-installer / portable paketleme
-Katkıda Bulunma
+Bir hata bildirirken mümkünse şunları ekleyin:
 
-Bug raporları, özellik önerileri ve pull request'ler kabul edilir.
+- GalaXako Editor sürümü
+- Windows sürümü
+- Dosya türü
+- Yaklaşık dosya boyutu
+- Hatayı tekrar oluşturma adımları
 
-Bug bildirirken mümkünse şunları ekleyin:
+Hassas dosya içeriklerini paylaşmayın.
 
-GX Editor sürümü
-Windows sürümü
-dosya türü
-yaklaşık dosya boyutu
-hatayı tekrar oluşturma adımları
+---
 
-Hata bildirirken hassas dosya içeriklerini paylaşmayın.
-
-Lisans
-
-İlk kararlı sürümden önce uygun bir lisans seçilecektir.
-
-<p align="center"> <strong>GalaXako Editor</strong><br> Büyük Dosyalar. Temiz Listeler. Hızlı İşlem. </p> ```
+<p align="center">
+  <strong>GalaXako Editor</strong><br>
+  Büyük Dosyalar. Temiz Listeler. Hızlı İşlem.
+</p>
