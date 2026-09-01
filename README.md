@@ -169,3 +169,126 @@ Tekrarları Kaldır
 Sırala
   ↓
 Dışa Aktar
+
+Pipeline'lar yerel olarak kaydedilebilir ve batch işlemlerde tekrar kullanılabilir.
+
+Performans Yaklaşımı
+
+GalaXako Editor, çok büyük dosyaları tek bir string veya dizi içine yüklememek üzere tasarlanmıştır.
+
+Büyük dosya işlemlerinde kullanılan başlıca yaklaşımlar:
+
+FileStream
+akış tabanlı işleme
+sınırlı bellek kullanımı
+seyrek indeks
+disk destekli geçici işlemler
+harici birleştirmeli sıralama
+sınırlandırılmış eşzamanlılık
+async işlemler
+iptal desteği
+seyreltilmiş ilerleme güncellemeleri
+
+Pahalı dosya işlemleri UI iş parçacığından ayrı çalıştırılır.
+
+Gizlilik
+
+GX Editor yerel çalışan bir masaüstü uygulamasıdır.
+
+Varsayılan olarak telemetri yok
+Analitik yok
+Dosya yükleme yok
+Uzak sunucuya içerik gönderimi yok
+
+Yerel uygulama verileri şu klasörde saklanır:
+
+%LocalAppData%\GalaXakoEditor\
+Proje Yapısı
+GalaXakoEditor/
+│
+├── GalaXakoEditor/
+│   └── WPF uygulaması / Views / ViewModels
+│
+├── src/
+│   ├── GalaXako.Editor.Core/
+│   └── GalaXako.Editor.Infrastructure/
+│
+├── tests/
+│   └── GalaXako.Editor.Tests/
+│
+└── tools/
+    └── GalaXako.Editor.DatasetGenerator/
+Gereksinimler
+Geliştirme
+Windows 10 / Windows 11 x64
+.NET 10 SDK
+Visual Studio 2026 veya uyumlu bir IDE
+Çalıştırma
+
+Self-contained Windows x64 sürümünde son kullanıcının ayrıca .NET Runtime kurması gerekmez.
+
+Derleme
+
+Repoyu klonlayın:
+
+git clone https://github.com/AliAkgun0/gxeditor.git
+cd gxeditor
+
+Bağımlılıkları yükleyin:
+
+dotnet restore .\GalaXakoEditor.slnx
+
+Release derlemesi:
+
+dotnet build .\GalaXakoEditor.slnx -c Release
+
+Testleri çalıştırın:
+
+dotnet test .\GalaXakoEditor.slnx -c Release
+Yayınlama
+
+Windows x64 için self-contained sürüm:
+
+dotnet publish .\GalaXakoEditor\GalaXakoEditor.csproj -c Release -p:PublishProfile=win-x64
+
+Çıktı klasörü:
+
+GalaXakoEditor\bin\Release\publish\win-x64-single\
+Geliştirme Durumu
+
+GX Editor aktif olarak geliştirilmektedir.
+
+Çekirdek dosya işleme özellikleri hem otomatik hem manuel testlerden geçirilmektedir.
+
+İlk kararlı sürüm öncesinde bazı UI ve edge-case problemleri bulunabilir.
+
+Yol Haritası
+
+Planlanan geliştirmeler:
+
+UI/UX iyileştirmeleri
+tüm modüllerde daha kapsamlı önizleme desteği
+gelişmiş büyük dosya stres testleri
+batch işlem kontrollerinin iyileştirilmesi
+gelişmiş encoding seçenekleri
+daha kapsamlı benchmark sonuçları
+installer / portable paketleme
+Katkıda Bulunma
+
+Bug raporları, özellik önerileri ve pull request'ler kabul edilir.
+
+Bug bildirirken mümkünse şunları ekleyin:
+
+GX Editor sürümü
+Windows sürümü
+dosya türü
+yaklaşık dosya boyutu
+hatayı tekrar oluşturma adımları
+
+Hata bildirirken hassas dosya içeriklerini paylaşmayın.
+
+Lisans
+
+İlk kararlı sürümden önce uygun bir lisans seçilecektir.
+
+<p align="center"> <strong>GalaXako Editor</strong><br> Büyük Dosyalar. Temiz Listeler. Hızlı İşlem. </p> ```
